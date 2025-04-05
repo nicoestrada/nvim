@@ -6,11 +6,11 @@ return {
         config = function()
             require("cyberdream").setup({
                 variant = "auto",
-                transparent = true,
+                transparent = false,
                 saturation = 0.8,
                 italic_comments = true,
                 hide_fillchars = true,
-                borderless_pickers = true,
+                -- borderless_pickers = true,
                 cache = true,
             })
             vim.cmd([[colorscheme cyberdream]])

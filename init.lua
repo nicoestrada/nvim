@@ -1,2 +1,2 @@
 require("config.lazy")
-require("config.options")
+vim.lsp.enable({ "luals", "rust_analyzer" })
