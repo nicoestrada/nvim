@@ -6,7 +6,7 @@ return {
         config = function()
             require("cyberdream").setup({
                 variant = "auto",
-                transparent = false,
+                transparent = true,
                 saturation = 0.8,
                 italic_comments = true,
                 hide_fillchars = true,
