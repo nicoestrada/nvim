@@ -1,19 +1,24 @@
 return {
     {
-        "scottmckendry/cyberdream.nvim",
+        "EdenEast/nightfox.nvim",
         lazy = false,
         priority = 1000,
         config = function()
-            require("cyberdream").setup({
-                variant = "auto",
-                transparent = true,
-                saturation = 0.8,
-                italic_comments = true,
-                hide_fillchars = true,
-                -- borderless_pickers = true,
-                cache = true,
+            require("nightfox").setup({
+                options = {
+                        compile_path = vim.fn.stdpath("cache") .. "/nightfox",
+                        compile_file_suffix = "_compiled",
+                        transparent = true,
+                        terminal_colors = true,
+                        dim_inactive = false,
+                        module_default = true,
+                        styles = {
+                            comments = "italic",
+                            keywords = "bold",
+                        },
+                },
             })
-            vim.cmd([[colorscheme cyberdream]])
+            vim.cmd([[colorscheme carbonfox]])
         end,
     },
 }
