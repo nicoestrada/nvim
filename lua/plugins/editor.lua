@@ -92,5 +92,15 @@ return {
         ---@module "ibl"
         ---@type ibl.config
         opts = {},
+    },
+    {
+      "folke/flash.nvim",
+      event = "VeryLazy",
+      ---@type Flash.Config
+      opts = {},
+      -- stylua: ignore
+      keys = {
+        { "<C-z>", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+      },
     }
 }
