@@ -33,6 +33,9 @@ vim.opt.scrolloff = 10
 
 vim.o.winborder = "rounded"
 
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
 -- Setup lazy.nvim
 require("lazy").setup({
     spec = {
