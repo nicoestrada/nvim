@@ -1,21 +1,9 @@
 return {
-  -- GitHub Copilot (for ghost text)
-  {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
-    opts = {
-      suggestion = { enabled = true, auto_trigger = true, debounce = 75 },
-      panel = { enabled = false },
-    },
-  },
-
   -- Copilot LSP (for Next Edit Suggestions)
   {
     "github/copilot.vim",
     event = "VeryLazy",
   },
-
   -- Sidekick (uses Copilot LSP for NES)
   {
     "folke/sidekick.nvim",
@@ -34,9 +22,6 @@ return {
         "<tab>",
         function()
           if require("sidekick").nes_jump_or_apply() then
-            return
-          end
-          if vim.lsp.inline_completion.get() then
             return
           end
           return "<tab>"
