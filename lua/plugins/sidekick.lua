@@ -18,18 +18,6 @@ return {
       },
     },
     keys = {
-      {
-        "<tab>",
-        function()
-          if require("sidekick").nes_jump_or_apply() then
-            return
-          end
-          return "<tab>"
-        end,
-        mode = { "i", "n" },
-        expr = true,
-        desc = "Goto/Apply Next Edit Suggestion",
-      },
         { "<leader>at", function() require("sidekick.nes").toggle() end, desc = "Toggle NES" },
         { "<leader>aa", function() require("sidekick.cli").toggle() end, desc = "Toggle AI CLI" },
         { "<leader>as", function() require("sidekick.cli").select() end, desc = "Select CLI" },
