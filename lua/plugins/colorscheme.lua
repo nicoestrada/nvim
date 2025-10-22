@@ -1,24 +1,17 @@
 return {
-    {
-        "EdenEast/nightfox.nvim",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            require("nightfox").setup({
-                options = {
-                        compile_path = vim.fn.stdpath("cache") .. "/nightfox",
-                        compile_file_suffix = "_compiled",
-                        transparent = true,
-                        terminal_colors = true,
-                        dim_inactive = false,
-                        module_default = true,
-                        styles = {
-                            comments = "italic",
-                            keywords = "bold",
-                        },
-                },
-            })
-            vim.cmd([[colorscheme carbonfox]])
-        end,
+  {
+    "blazkowolf/gruber-darker.nvim",
+    lazy = false,        -- load immediately
+    priority = 1000,     -- ensure it loads before other plugins
+    opts = {
+      bold = false,      -- example customization
+      italic = {
+        strings = false, -- disable italics for strings
+      },
     },
+    config = function(_, opts)
+      require("gruber-darker").setup(opts)
+      vim.cmd.colorscheme("gruber-darker")
+    end,
+  },
 }
