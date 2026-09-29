@@ -1,4 +1,5 @@
-vim.o.clipboard = "unnamedplus"
+vim.g.clipboard = "osc52"
+vim.opt.clipboard = "unnamedplus"
 require("config.lazy")
 vim.schedule(function()
   local ok = pcall(function()
